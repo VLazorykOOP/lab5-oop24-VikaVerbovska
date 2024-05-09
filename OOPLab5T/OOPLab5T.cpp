@@ -141,8 +141,6 @@ int main() {
     else if (choice == 2) {
         Dog dog(10, "Brown", 3);
         dog.print();
-
-
     }
     
     else {
