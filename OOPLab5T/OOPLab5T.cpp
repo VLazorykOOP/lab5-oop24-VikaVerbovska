@@ -69,28 +69,6 @@ public:
     }
 };
 
-int main1() {
-    // Тестування класу Animal
-    Animal animal("Mammal", 4, 2);
-    cout << "Animal information:" << endl;
-    animal.print();
-    cout << endl;
-
-    // Тестування класу Pet
-    Pet pet("Dog", 4, 4, "Buddy");
-    cout << "Pet information:" << endl;
-    pet.print();
-
-    // Тестування функції зміни ім'я
-    pet.changeName("Max");
-    cout << "New pet name: " << pet.getName() << endl;
-
-    // Тестування функції зміни числа нащадків
-    pet.changeOffspring(6);
-    cout << "New number of offspring: " << pet.getOffspring() << endl;
-
-    return 0;
-}
 
 class Tail {
 private:
@@ -148,14 +126,25 @@ int main() {
     cin >> choice;
 
     if (choice == 1) {
-        Animal animal("Mammal", 4, 2);
-        cout << "Animal information:" << endl;
-        animal.print();
+        Pet pet("Mammal", 4, 2, "Fido"); 
+        cout << "Pet information:" << endl;
+        pet.print();
+
+        // Тестування функції зміни ім'я
+        pet.changeName("Max");
+        cout << "New pet name: " << pet.getName() << endl;
+
+        // Тестування функції зміни числа нащадків
+        pet.changeOffspring(6);
+        cout << "New number of offspring: " << pet.getOffspring() << endl;
     }
     else if (choice == 2) {
         Dog dog(10, "Brown", 3);
         dog.print();
+
+
     }
+    
     else {
         cout << "Invalid choice!" << endl;
     }
